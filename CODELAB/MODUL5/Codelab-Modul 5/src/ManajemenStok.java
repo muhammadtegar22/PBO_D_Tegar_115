@@ -64,7 +64,7 @@ public class ManajemenStok {
                         System.out.println(i + ". " + daftarBarang.get(i).getNama() + " (Stok: " + daftarBarang.get(i).getStok() + ")");
                     }
 
-                    try {
+                    try {// untuk menaruh kode yang berpotensi menimbulkan error
                         System.out.print("Masukkan indeks barang: ");
                         int indeks = scanner.nextInt();
 
@@ -75,8 +75,8 @@ public class ManajemenStok {
 
                         if (jumlahDiambil > barang.getStok()) {
                             throw new StokTidakCukupException("Stok untuk " + barang.getNama() + " hanya tersisa " + barang.getStok());
-                        }
-
+                        }//menggunakan throw new memanggil dari class exception, lalu dari class exception di lemparkan kembali ke manajemenstok
+                        // intinya untuk memberikan informasi spesifik tentang kesalahan yang terjadi
                         barang.setStok(barang.getStok() - jumlahDiambil);
                         System.out.println("Barang " + ("'") + (barang.getNama()) + ("'") + (" Berhasil Dikurangi. Sisa Stok: " + ("'") + (barang.getStok()) + ("'")));
                     } catch (InputMismatchException e) {
@@ -84,7 +84,7 @@ public class ManajemenStok {
                         scanner.next();
                     } catch (IndexOutOfBoundsException e) {
                         System.out.println("Indeks tidak valid!");
-                    } catch (StokTidakCukupException e) {
+                    } catch (StokTidakCukupException e) {//untuk menangani error yang terjadi di dalam blok try
                         System.out.println("Error: " + e.getMessage());
                     }
 
