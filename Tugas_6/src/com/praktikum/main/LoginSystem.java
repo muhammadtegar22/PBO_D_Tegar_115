@@ -12,8 +12,8 @@ public class LoginSystem {
     public static ArrayList<User> userList = new ArrayList<>();
     public static ArrayList<Items> reportedItems = new ArrayList<>();
     static{
-        userList.add(new Admin("Admin115", "Password115", "Tegar", "115"));
-        userList.add(new Mahasiswa("Tegar", "202410370110115"));
+        userList.add(new Admin("admin115", "password115", "tegar", "123"));
+        userList.add(new Mahasiswa("Muhammad Tegar Budi Wicaksano", "202410370110115"));
     }
     public static void main(String[] args) {
         Scanner objinput = new Scanner(System.in);

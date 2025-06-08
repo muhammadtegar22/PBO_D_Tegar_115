@@ -34,9 +34,9 @@ public class AdminDashboard {
         TableColumn<Items,String> kolomLokasi = new TableColumn<>("Lokasi");
         TableColumn<Items,String> kolomStatus =  new TableColumn<>("Status");
 
-        kolomNama.setCellValueFactory(new PropertyValueFactory<>("Itemname"));
-        kolomDeskripsi.setCellValueFactory(new PropertyValueFactory<>("description"));
-        kolomLokasi.setCellValueFactory(new PropertyValueFactory<>("location"));
+        kolomNama.setCellValueFactory(new PropertyValueFactory<>("namaItem"));
+        kolomDeskripsi.setCellValueFactory(new PropertyValueFactory<>("deskripsi"));
+        kolomLokasi.setCellValueFactory(new PropertyValueFactory<>("lokasi"));
         kolomStatus.setCellValueFactory(new PropertyValueFactory<>("status"));
 
         tableItems.getColumns().setAll(kolomNama,kolomDeskripsi,kolomLokasi,kolomStatus);
